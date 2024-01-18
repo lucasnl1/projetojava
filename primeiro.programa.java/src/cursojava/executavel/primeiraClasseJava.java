@@ -57,9 +57,9 @@ public class primeiraClasseJava {
 		System.out.println("RG " + aluno1.getRegistroGeral());
 		System.out.println("Data da matrícula " + aluno1.getDataMatricula());
 		System.out.println("Série " + aluno1.getSerieMatriculado());
-		System.out.println("Idade é = " + aluno1.getIdade());
 		System.out.println("Nascimento é = " + aluno1.getDataNascimento());
 		System.out.println("Média da nota é = " + aluno1.getMediaNota());
+		
 		/*Uso de operadores ternários*/
 		System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("Resultado 2 = "+ aluno1.getAlunoAprovado2());
