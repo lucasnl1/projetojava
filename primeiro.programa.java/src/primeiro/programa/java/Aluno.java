@@ -1,5 +1,7 @@
 package primeiro.programa.java;
 
+import java.util.Objects;
+
 public class Aluno {
 /*Atributos do objeto Aluno*/
 	private String nome;
@@ -148,5 +150,31 @@ public class Aluno {
 			return "Aluno está reprovado";
 		}
 	}
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
+				+ "]";
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(numeroCpf);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(numeroCpf, other.numeroCpf);
+	}
+	
+	
+	
 	
 }
