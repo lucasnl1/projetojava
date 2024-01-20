@@ -18,22 +18,22 @@ public class Aluno {
 	private String serieMatriculado;
 
 	/* Criando lista e instanciando as disciplinas */
-	
+
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		disciplinas = disciplinas;
 	}
+
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-	
-	/* Cria os dados na memoria - Sendo padrão do Java */
-	
-	public Aluno() {
-		
-	}
 
+	/* Cria os dados na memoria - Sendo padrão do Java */
+
+	public Aluno() {
+
+	}
 
 	/* Veremos os metodos SETTERS e GETTERS do objeto */
 	/* SET é para adicionar ou receber dados para os atributos */
@@ -120,21 +120,21 @@ public class Aluno {
 		this.serieMatriculado = serieMatriculado;
 	}
 
-
 	/* Método que retorna a média do aluno */
 
 	public double getMediaNota() {
-		
+
 		double somaNotas = 0.0;
-		
+
 		for (Disciplina disciplina : disciplinas) {
-			 somaNotas += disciplina.getNota();
+			somaNotas += disciplina.getNota();
 		}
-		
+
 		return somaNotas / disciplinas.size();
 	}
 
 	/* Métodos que retornam se aluno está aprovado ou reprovado */
+
 	/* Retorno com True or False para aprovado e reprovado */
 
 	public boolean getAlunoAprovado() {
@@ -165,8 +165,6 @@ public class Aluno {
 
 	/* método toString */
 
-	
-
 	/* método equals */
 
 	@Override
@@ -180,6 +178,7 @@ public class Aluno {
 		Aluno other = (Aluno) obj;
 		return Objects.equals(numeroCpf, other.numeroCpf);
 	}
+
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="

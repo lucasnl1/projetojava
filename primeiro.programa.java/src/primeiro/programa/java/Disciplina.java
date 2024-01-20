@@ -1,10 +1,9 @@
 package primeiro.programa.java;
-import java.util.Objects;
 
+import java.util.Objects;
 
 /* Essa classe Disciplina servirá para todos os objetos
  *  e intancias de notas e disciplinas*/
-
 
 public class Disciplina {
 

@@ -24,9 +24,7 @@ public class primeiraClasseJava {
 		String Pai = JOptionPane.showInputDialog("Qual o nome do pai?");
 		String matricula = JOptionPane.showInputDialog("Qual a data da matrícula?");
 		String serie = JOptionPane.showInputDialog("Qual a série do aluno?");
-		
-		
-		
+
 		/* new Aluno() é uma instância ( Criação de objeto) */
 		/* aluno1 é uma refernência para o objeto aluno */
 
