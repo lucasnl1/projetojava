@@ -30,6 +30,9 @@ public class primeiraClasseJava {
 
 		Aluno aluno1 = new Aluno();
 
+		/*Referencia o objeto e seta a informação
+		 *  recolhida na entrada para o atributo*/
+		
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(Nascimento);
@@ -41,6 +44,8 @@ public class primeiraClasseJava {
 		aluno1.setDataMatricula(matricula);
 		aluno1.setSerieMatriculado(serie);
 
+		/*Adiciona disciplinas na lista de forma dinâmica*/
+		
 		for (int pos = 1; pos <= 4; pos++) {
 
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + " ?");
@@ -50,7 +55,15 @@ public class primeiraClasseJava {
 			disciplina.setNota(Double.valueOf(notaDisciplina));
 			
 			aluno1.getDisciplinas().add(disciplina);
-
+		}
+		
+		/*Remove disciplinas na lista de forma dinâmica*/
+		
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina ?");
+		
+		if (escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3, 4 ?");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1);
 		}
 
 		/* Impressão das informações no console */
