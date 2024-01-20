@@ -41,29 +41,17 @@ public class primeiraClasseJava {
 		aluno1.setDataMatricula(matricula);
 		aluno1.setSerieMatriculado(serie);
 
-		Disciplina disciplina1 = new Disciplina();
-		disciplina1.setDisciplina("Banco de dados");
-		disciplina1.setNota(80);
+		for (int pos = 1; pos <= 4; pos++) {
 
-		aluno1.getDisciplinas().add(disciplina1);
+			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + " ?");
+			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + "?");
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno1.getDisciplinas().add(disciplina);
 
-		Disciplina disciplina2 = new Disciplina();
-		disciplina2.setDisciplina("Matematica");
-		disciplina2.setNota(70);
-
-		aluno1.getDisciplinas().add(disciplina2);
-
-		Disciplina disciplina3 = new Disciplina();
-		disciplina3.setDisciplina("SI");
-		disciplina3.setNota(90);
-
-		aluno1.getDisciplinas().add(disciplina3);
-
-		Disciplina disciplina4 = new Disciplina();
-		disciplina4.setDisciplina("Java");
-		disciplina4.setNota(85);
-
-		aluno1.getDisciplinas().add(disciplina4);
+		}
 
 		/* Impressão das informações no console */
 
