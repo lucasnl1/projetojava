@@ -26,7 +26,7 @@ public class primeiraClasseJava {
 		/* Caixas de entrada de dados com teclado */
 
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?"+qtd+"?");
-		/*String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
+		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
 		String Nascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola?");
 		String rg = JOptionPane.showInputDialog("Qual o rg aluno?");
@@ -34,7 +34,7 @@ public class primeiraClasseJava {
 		String Mae = JOptionPane.showInputDialog("Qual o nome da mãe?");
 		String Pai = JOptionPane.showInputDialog("Qual o nome do pai?");
 		String matricula = JOptionPane.showInputDialog("Qual a data da matrícula?");
-		String serie = JOptionPane.showInputDialog("Qual a série do aluno?");*/
+		String serie = JOptionPane.showInputDialog("Qual a série do aluno?");
 
 		/* new Aluno() é uma instância ( Criação de objeto) */
 		/* aluno1 é uma refernência para o objeto aluno */
@@ -45,7 +45,7 @@ public class primeiraClasseJava {
 		 *  recolhida na entrada para o atributo*/
 		
 		aluno1.setNome(nome);
-		/* aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(Nascimento);
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setRegistroGeral(rg);
@@ -53,7 +53,7 @@ public class primeiraClasseJava {
 		aluno1.setNomeMae(Mae);
 		aluno1.setNomePai(Pai);
 		aluno1.setDataMatricula(matricula);
-		aluno1.setSerieMatriculado(serie); */
+		aluno1.setSerieMatriculado(serie);
 
 		/*Adiciona disciplinas na lista de forma dinâmica*/
 		
@@ -90,37 +90,20 @@ public class primeiraClasseJava {
 		alunos.add(aluno1);
 		
 	}
-		/*Lista os alunos*/
-		
-		for (Aluno aluno : alunos) {
-			
-			/*procura aluno na lista e calcula média*/
-			if (aluno.getNome().equalsIgnoreCase("Lucas")) {
-				
-				alunos.remove(aluno);
-				break;
-			} else {
-			/* Impressão das informações do aluno no console */
-			
-			/* Descrição do objeto Aluno na memória com toString */
-			System.out.println(aluno); 
-			/* Impressão das informações de média */
-			System.out.println("Média do aluno =" + aluno.getMediaNota());
+		for (int pos = 0; pos < alunos.size(); pos ++) {
+			Aluno aluno = alunos.get(pos);
+			System.out.println("Aluno = " + aluno.getNome());
+			System.out.println("Média : " + aluno.getMediaNota());
 			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
-			System.out.println("===================================================================== " );
+			System.out.println("======================================================================");
 			
-			}
-		}
-		for (Aluno aluno : alunos) {
-			System.out.println("Alunos que sobraram na lista");
-			System.out.println(aluno.getNome());
-			System.out.println("Suas matérias são: ");
-			
-			for (Disciplina disciplina : aluno.getDisciplinas()) {
-				System.out.println(disciplina.getDisciplina());
-				System.out.println("===================================================================== " );
+			for ( int posd = 0; posd < aluno.getDisciplinas().size(); posd ++) {
 				
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+				System.out.println("Matéria: " + disc.getDisciplina() + "Nota: "+ disc.getNota());
 			}
+			
+			System.out.println("======================================================================");
 		}
 	}
 }
