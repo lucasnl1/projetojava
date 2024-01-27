@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import cursojava.constantes.StatusAluno;
+
 public class Aluno {
 	/* Atributos do objeto Aluno */
 	private String nome;
@@ -140,9 +142,9 @@ public class Aluno {
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
 		if (media >= 70) {
-			return true; /*Aprovado*/
+			return true; /* Aprovado */
 		} else {
-			return false;/*Reprovado*/
+			return false;/* Reprovado */
 		}
 	}
 	/* Retorno com texto */
@@ -150,13 +152,13 @@ public class Aluno {
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
 		if (media >= 50) {
-			if (media >= 70){
-				return "Aluno está aprovado";
+			if (media >= 70) {
+				return StatusAluno.APROVADO;
 			} else {
-				return "Aluno em recuperação";
+				return StatusAluno.RECUPERACAO;
 			}
 		} else {
-			return "Aluno está reprovado";
+			return StatusAluno.REPROVADO;
 		}
 	}
 
