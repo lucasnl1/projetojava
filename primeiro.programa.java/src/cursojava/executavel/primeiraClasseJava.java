@@ -18,6 +18,12 @@ public class primeiraClasseJava {
 
 	public static void main(String[] args) {
 
+		String login = JOptionPane.showInputDialog("Insira sua login");
+		String senha = JOptionPane.showInputDialog("Insira sua login");
+		
+		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+			
+	
 		/*Instancia lista de alunos*/
 		List<Aluno> alunos = new  ArrayList<Aluno>();
 		
@@ -26,12 +32,13 @@ public class primeiraClasseJava {
 
 		/* Referncia que para X quantidade de alunos adiciona aluno*/
 		
-		for (int qtd = 1; qtd <=5 ; qtd++) {
+		for (int qtd = 1; qtd <= 4 ; qtd++) {
 		
 		/* Caixas de entrada de dados com teclado */
 
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?"+qtd+"?");
-		/*String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
+		
+		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
 		String Nascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola?");
 		String rg = JOptionPane.showInputDialog("Qual o rg aluno?");
@@ -39,7 +46,7 @@ public class primeiraClasseJava {
 		String Mae = JOptionPane.showInputDialog("Qual o nome da mãe?");
 		String Pai = JOptionPane.showInputDialog("Qual o nome do pai?");
 		String matricula = JOptionPane.showInputDialog("Qual a data da matrícula?");
-		String serie = JOptionPane.showInputDialog("Qual a série do aluno?");*/
+		String serie = JOptionPane.showInputDialog("Qual a série do aluno?");
 
 		/* new Aluno() é uma instância ( Criação de objeto) */
 		/* aluno1 é uma refernência para o objeto aluno */
@@ -50,7 +57,7 @@ public class primeiraClasseJava {
 		 *  recolhida na entrada para o atributo*/
 		
 		aluno1.setNome(nome);
-		/*aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(Nascimento);
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setRegistroGeral(rg);
@@ -58,7 +65,7 @@ public class primeiraClasseJava {
 		aluno1.setNomeMae(Mae);
 		aluno1.setNomePai(Pai);
 		aluno1.setDataMatricula(matricula);
-		aluno1.setSerieMatriculado(serie);*/
+		aluno1.setSerieMatriculado(serie);
 
 		/*Adiciona disciplinas na lista de forma dinâmica*/
 		
@@ -90,7 +97,7 @@ public class primeiraClasseJava {
 			
 			}
 		}
-		
+	
 		/* Adiciona o aluno a lista*/
 		alunos.add(aluno1);
 		
@@ -131,5 +138,6 @@ public class primeiraClasseJava {
 			 System.out.println("Aluno =" + aluno.getNome()
 			 +" Resultado = "+ aluno.getAlunoAprovado2() + " Com média de =" + aluno.getMediaNota());
 		 }
+		}
 	}
 }
