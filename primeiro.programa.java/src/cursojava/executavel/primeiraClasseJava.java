@@ -9,8 +9,7 @@ import javax.lang.model.element.ElementKind;
 import javax.swing.JOptionPane;
 
 import cursojava.constantes.StatusAluno;
-import primeiro.programa.java.Aluno;
-import primeiro.programa.java.Disciplina;
+import cursojava.classes.*;
 
 public class primeiraClasseJava {
 
