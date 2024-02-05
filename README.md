@@ -22,7 +22,7 @@ O Sistema Escolar em Java é um projeto de estudo dedicado ao desenvolvimento de
    - Geração de relatórios personalizados, como boletins individuais e listas de alunos por disciplina.
 
 5. **Interface Gráfica:**
-   - Desenvolvimento de uma interface gráfica amigável para facilitar a interação com o sistema.
+   - Desenvolvimento de uma interface para facilitar a interação com o sistema.
 
 ## Tecnologias Utilizadas
 
