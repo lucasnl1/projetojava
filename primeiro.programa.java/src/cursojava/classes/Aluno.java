@@ -6,15 +6,9 @@ import java.util.Objects;
 
 import cursojava.constantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 	/* Atributos do objeto Aluno */
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
+
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
