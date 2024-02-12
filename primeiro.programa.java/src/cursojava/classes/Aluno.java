@@ -6,6 +6,7 @@ import java.util.Objects;
 
 import cursojava.constantes.StatusAluno;
 
+/*casse objeto q*/
 public class Aluno extends Pessoa {
 	/* Atributos do objeto Aluno */
 
