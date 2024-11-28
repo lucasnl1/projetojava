@@ -17,8 +17,8 @@ public class primeiraClasseJava {
 
 	public static void main(String[] args) {
 
-		String login = JOptionPane.showInputDialog("Insira sua login");
-		String senha = JOptionPane.showInputDialog("Insira sua login");
+		String login = JOptionPane.showInputDialog("Insira seu login");
+		String senha = JOptionPane.showInputDialog("Insira sua senha");
 		
 		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
 			
